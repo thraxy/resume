@@ -1,0 +1,215 @@
+%-------------------------
+% Resume in Latex
+% Author : Mohammed Nabil Akbar
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+
+\begin{center}
+    \textbf{\Huge \scshape Mohammed Nabil Akbar} \\ \vspace{1pt}
+    \href{https://github.com/thraxy}{\underline{github.com/thraxy}}
+\end{center}
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C/C++, Java, Python, GDScript, SQL, HTML/CSS, PHP} \\
+     \textbf{Developer Tools}{: VS Code, Visual Studio, Git, Linux/UNIX, AWS, PyCharm, CodeBlocks, Xampp } \\
+     \textbf{Libraries}{: pandas, NumPy, Matplotlib, Pygame, OpenGL, cURL}
+    }}
+ \end{itemize}
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Rutgers University}{Camden, NJ}
+      {Bachelor of Arts in Computer Science}{May 2022 -- May 2023}
+      \resumeSubheading
+      {Rutgers University}{Camden, NJ}
+      {Major: Nursing}{Sep. 2020 -- May 2022}
+    \resumeSubheading
+      {Camden County College}{Blackwood, NJ}
+      {Major: Nursing}{Aug. 2018 -- May 2020}
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Multithreaded Web Crawler} $|$ \emph{C, cURL, Linux}}{May 2023}
+          \resumeItemListStart
+            \resumeItem{Developed a multithreaded web crawler in C on Linux to navigate the internet from a seed file of links}
+            \resumeItem{Implemented pthread and cURL libraries to concurrently search for more links to be outputted to another file}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Alert Ninja: SMS and Email Notifier} $|$ \emph{Python, AWS}}{May 2023}
+          \resumeItemListStart
+            \resumeItem{Built a Python application leveraging AWS services, including S3, Lambda, SES, SNS, and IAM.}
+            \resumeItem{Implemented an SMS and email notification system that sends alerts to a pre-verified list of users}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Dictionary Android App} $|$ \emph{Java, Android Studio, freeDictionary REST API}}{May 2023}
+          \resumeItemListStart
+            \resumeItem{Developed an Android dictionary application with a simple user interface (UI) }
+            \resumeItem{Utilized a REST API, freeDictionary, to retrieve and display the definitions of user-searched words}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Linux Shell and Windows Shell} $|$ \emph{C, Linux}}{Feb. 2023}
+          \resumeItemListStart
+            \resumeItem{Created a C-based shell capable of accepting user commands and executing them}
+            \resumeItem{Developed separate versions for Linux and Windows environments, providing a user-friendly interface for command execution}
+          \resumeItemListEnd
+      
+      \resumeProjectHeading
+          {\textbf{PARK Co. | Parking Garage Locator} $|$ \emph{HTML, CSS, PHP, Xampp}}{Dec. 2022}
+          \resumeItemListStart
+            \resumeItem{Designed and implemented a website with a straightforward database and user interface (UI)}
+            \resumeItem{Enabled users to input location details and retrieve information on nearby parking garages}
+          \resumeItemListEnd
+      
+    
+    \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Produce Associate}{March 2020 -- Present}
+      {MOM's Organic Market}{NJ}
+      \resumeItemListStart
+        \resumeItem{Manage daily orders averaging \$5,000 and achieve average daily produce sales of \$9,000}
+        \resumeItem{Adjust shelf planograms and end cap plans to effectively merchandise products}
+        \resumeItem{Receive and unload deliveries, ensuring product quality and accuracy}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Print and Marketing Associate}{Jan. 2019 -- March 2020}
+      {Staples}{NJ}
+      \resumeItemListStart
+        \resumeItem{Provided customized copy and printing solutions to meet customers' unique needs}
+        \resumeItem{Executed complex customer orders accurately and within specified timeframes}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Tech Associate}{May 2017 -- Jan. 2019}
+      {Staples}{NJ}
+      \resumeItemListStart
+        \resumeItem{Assisted customers with iPhone screen and battery repairs, as well as computer parts replacement and installation}
+        \resumeItem{Offered guidance in software installation, data transfer, and malware removal}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Sales Associate}{Nov. 2016 -- May 2017}
+      {RadioShack}{NJ}
+      \resumeItemListStart
+        \resumeItem{Cultivated strong customer relationships to foster loyalty and repeat business}
+        \resumeItem{Trained new hires on company processes, product knowledge, customer service, and selling techniques}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+%-------------------------------------------
+\end{document}
